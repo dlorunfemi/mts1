@@ -9,6 +9,13 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- Domain -->
+        <div class="mt-4">
+            <x-input-label for="domain" :value="__('Domain')" />
+            <x-text-input id="domain" class="block mt-1 w-full" type="text" name="domain" :value="old('domain')" required />
+            <x-input-error :messages="$errors->get('domain')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />

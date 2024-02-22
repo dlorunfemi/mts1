@@ -3,8 +3,7 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
-        @csrf
-
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
